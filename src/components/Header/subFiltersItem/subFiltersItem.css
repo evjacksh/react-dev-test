@@ -1,0 +1,28 @@
+.sub_filters_item{
+    cursor: pointer;
+    user-select: none;
+
+}
+.sub_filters_item.current{
+    position: relative;
+}
+.sub_filters_item.current::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    padding: 0 .55em;
+    background-color: rgb(0, 127, 231);
+    position: absolute;
+    transform: translateX(-7.5%);
+    top: 180%;
+}
+
+.sub_filters_item.current:first-child::after{
+    transform: translateX(-11%);
+    padding: 0 .7em;
+}
+.sub_filters_item.current:last-child::after{
+    transform: translateX(-5%);
+    padding: 0 .7em;
+}

@@ -1,0 +1,193 @@
+.app_header{
+    width: 100%;
+    height: 13%;
+    box-sizing: border-box;
+    padding: 1em .5em;
+    background-color: rgb(242, 242, 242);
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.app_header_upper{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_way_link{
+    width: 17%;
+    font-size: 17px;
+}
+
+.header_way_link_block{
+    display: flex;
+    margin-right: 5%;
+}
+
+.header_way_link_text_content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header_way_link_text > a{
+    text-decoration: none;
+    color: rgb(50, 152, 235)
+}
+
+.header_way_link_arrow_block {
+    width: 17px;
+    height: 17px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-left: .5em;
+}
+
+.header_way_link_arrow{
+    width: 40%;
+    height: 25%;
+    background-color: black;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.header_way_link_domain{
+    margin: 0.5em 0;
+    font-size: 13px;
+    color: rgb(43, 213, 20);
+}
+
+.header_filters_block{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_filters_block_chekbox{
+    background-color: grey;
+    padding: .1em .75em;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .3s;
+  
+}
+
+.header_filters_block_chekbox.active{
+    flex-direction: row-reverse;
+    background-color: rgb(113, 205, 59);
+}
+
+.header_filters_block_chekbox > input {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.header_filters_block_chekbox > label{
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    position: relative;
+    transition: .3s;
+}
+.header_filters_block_chekbox > label.active{
+    transform: translateX(50%);
+}
+
+.header_filters_block_text{
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.header_filters_block_text.active{
+    animation: .3s filterTextAnim ease-in;   
+}
+
+@keyframes filterTextAnim{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.header_filters_block_sorting{
+    padding: .3em .5em;
+    background-color: orange;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    width: auto;
+    max-width: 33%;
+}
+
+.header_filters_block_sorting > select{
+    background-color: orange;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    max-width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header_filters_block_sorting > select > option{
+    width: 100%;
+}
+
+.header_filters_period_selector_block{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    background-color: white;
+    border: 1px solid rgb(196, 196, 196);
+    padding: .25em;
+    user-select: none;
+}
+
+.datepickers_container{
+    display: flex;
+    width: 70%;
+}
+
+.react-datepicker__input-container > input{
+    outline: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.app_header_lower{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header_categories_list{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
